@@ -28,6 +28,8 @@ arithmepique.scene.etats.Depart = function(scene) {
     var tableau_resume = jQuery(".Depart .resume-scene");
     var modele_rangee = tableau_resume.find("tr.modele-scene").removeClass("modele-scene").remove();
     
+    jQuery(".info h1").text(this.scene.script.titre);
+    
     for(var operateur in this.scene.script.monstres) {
         if(!(operateur in nb_operations)) continue;
         var nom_monstre = this.scene.script.monstres[operateur];
@@ -121,17 +123,30 @@ arithmepique.scene.etats.Question = function(scene) {
     });
     
     jQuery("body").on("keypress.arithmepique", function(event) {
+        
         if(48 <= event.which && event.which <= 57) {
+            console.log(event);
             cumul += event.key;
             noeud_saisie.text(cumul);
         }
         
         if("Enter" === event.key) {
+            console.log(event);
             noeud_saisie.text("");
             that.surBoutonReponse(cumul); 
+            event.preventDefault();
         }
         
         return true;
+    });
+    
+    jQuery('html').on("keydown.arithmepique", function(event){
+        
+        if(8 === event.keyCode || 46 === event.keyCode) {
+           cumul = "";
+           noeud_saisie.text("");
+           event.preventDefault();
+        }
     });
     
     if(this.scene.script.chrono) {
@@ -539,7 +554,7 @@ arithmepique.scene.Scene = function(script_id) {
 
 arithmepique.scene.Scene.prototype = {
     nbEssaisAlloues: 5,
-    dureeMillisecsChrono: 10 * 1000,
+    dureeMillisecsChrono: 15 * 1000,
     classesMonstres: [
         "araignee", "abeille", "rat",
         "grenouille", "chauve-souris", "fantome",

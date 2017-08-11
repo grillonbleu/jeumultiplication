@@ -15,135 +15,135 @@
 
 /* Monde 1 / plaines */
 #sfois-10 .wrap,
-#s1-2-3-moins .wrap,
-#s1-2-3-plus-moins .wrap {
+#sfois-5 .wrap,
+#sfois-5-10 .wrap {
     background-image: url("../img/decors/bg_grasslands.png");
 }
 
 
 #sfois-10 .decor,
-#s1-2-3-moins .decor,
-#s1-2-3-plus-moins .decor {
+#sfois-5 .decor,
+#sfois-5-10 .decor {
     background: url(../img/decors/decor_plaine.png);    
 }
 
 
 /* Monde 2 / foret */
-#s4-5-plus .wrap,
-#s4-5-moins .wrap,
-#s4-5-plus-moins .wrap,
-#s4-5-plus-moins-chrono .wrap {
+#sfois-2 .wrap,
+#sfois-3 .wrap,
+#sfois-4 .wrap,
+#sfois-2-3-4 .wrap {
     background-color: #7ab71e;
     background-image: url("../img/decors/bg_shroom.png");
 }
 
-#s4-5-plus .decor,
-#s4-5-moins .decor,
-#s4-5-plus-moins .decor,
-#s4-5-plus-moins-chrono .decor {
+#sfois-2 .decor,
+#sfois-3 .decor,
+#sfois-4 .decor,
+#sfois-2-3-4 .decor {
     background: url(../img/decors/decor-foret.png);    
 }
 
 /* Monde 3 / desert */
-#s5-6-plus .wrap,
-#s5-6-moins .wrap,
-#s5-6-plus-moins .wrap,
-#s5-6-plus-moins-chrono .wrap {
+#sfois-6-1 .wrap,
+#sfois-6-2 .wrap,
+#sfois-6 .wrap,
+#sfois-6-chrono .wrap {
     background-image: url("../img/decors/bg_desert.png");
 }
 
-#s5-6-plus .decor,
-#s5-6-moins .decor,
-#s5-6-plus-moins .decor,
-#s5-6-plus-moins-chrono .decor {
+#sfois-6-1 .decor,
+#sfois-6-2 .decor,
+#sfois-6 .decor,
+#sfois-6-chrono .decor {
     background: url(../img/decors/decor-desert.png);    
 }
 
 
-#s5-6-plus .sol-1,
-#s5-6-moins .sol-1,
-#s5-6-plus-moins .sol-1,
-#s5-6-plus-moins-chrono .sol-1 {
+#sfois-6-1 .sol-1,
+#sfois-6-2 .sol-1,
+#sfois-6 .sol-1,
+#sfois-6-chrono .sol-1 {
     background: url("../img/decors/sandCenter.png");
 }
 
-#s5-6-plus .sol-1 > div,
-#s5-6-moins .sol-1 > div,
-#s5-6-plus-moins .sol-1 > div,
-#s5-6-plus-moins-chrono .sol-1 > div {
+#sfois-6-1 .sol-1 > div,
+#sfois-6-2 .sol-1 > div,
+#sfois-6 .sol-1 > div,
+#sfois-6-chrono .sol-1 > div {
     background: url("../img/decors/sandMid.png") repeat-x;
 }
 
 
 /* Monde 4 / lac */
-#s6-7-plus .wrap,
-#s6-7-moins .wrap,
-#s6-7-plus-moins .wrap,
-#s6-7-plus-moins-chrono .wrap {
+#sfois-7-1 .wrap,
+#sfois-7-2 .wrap,
+#sfois-7 .wrap,
+#sfois-7-chrono .wrap {
     background-image: url("../img/decors/bg_grasslands.png");
 }
 
-#s6-7-plus .sol-1,
-#s6-7-moins .sol-1,
-#s6-7-plus-moins .sol-1,
-#s6-7-plus-moins-chrono .sol-1 {
+#sfois-7-1 .sol-1,
+#sfois-7-2 .sol-1,
+#sfois-7 .sol-1,
+#sfois-7-chrono .sol-1 {
     height: 70px;
     background: #c0e8ec;
 }
 
-#s6-7-plus .sol-1 > div,
-#s6-7-moins .sol-1 > div,
-#s6-7-plus-moins .sol-1 > div,
-#s6-7-plus-moins-chrono .sol-1 > div {
+#sfois-7-1 .sol-1 > div,
+#sfois-7-2 .sol-1 > div,
+#sfois-7 .sol-1 > div,
+#sfois-7-chrono .sol-1 > div {
     background: url("../img/decors/liquidWaterTop_mid.png") repeat-x;
 }
 
 
-#s6-7-plus .sol-2,
-#s6-7-moins .sol-2,
-#s6-7-plus-moins .sol-2,
-#s6-7-plus-moins-chrono .sol-2 {
+#sfois-7-1 .sol-2,
+#sfois-7-2 .sol-2,
+#sfois-7 .sol-2,
+#sfois-7-chrono .sol-2 {
     background: url("../img/decors/liquidWater.png");
     height: 40%;
 }
 
-#s6-7-plus .decor,
-#s6-7-moins .decor,
-#s6-7-plus-moins .decor,
-#s6-7-plus-moins-chrono .decor {
+#sfois-7-1 .decor,
+#sfois-7-2 .decor,
+#sfois-7 .decor,
+#sfois-7-chrono .decor {
     background: url(../img/decors/decor-lac.png);    
 }
 
 
 /* Monde 5 / ville */
-#s7-8-plus .wrap,
-#s7-8-moins .wrap,
-#s7-8-plus-moins .wrap,
-#s7-8-plus-moins-chrono .wrap {
+#sfois-8-1 .wrap,
+#sfois-8-2 .wrap,
+#sfois-8 .wrap,
+#sfois-8-chrono .wrap {
     background-image: url("../img/decors/bg_grasslands.png");
     
 }
 
-#s7-8-plus .decor,
-#s7-8-moins .decor,
-#s7-8-plus-moins .decor,
-#s7-8-plus-moins-chrono .decor {
+#sfois-8-1 .decor,
+#sfois-8-2 .decor,
+#sfois-8 .decor,
+#sfois-8-chrono .decor {
     background: url(../img/decors/decor_ville.png);    
 }
 
 
 /* Monde 6 / Caverne */
 
-#s8-9-plus .wrap,
-#s8-9-moins .wrap,
-#s8-9-plus-moins .wrap,
-#s8-9-plus-moins-chrono .wrap {
+#sfois-9-1 .wrap,
+#sfois-9-2 .wrap,
+#sfois-9 .wrap,
+#sfois-9-1-chrono .wrap {
 }
 
-#s8-9-plus .sol-3,
-#s8-9-moins .sol-3,
-#s8-9-plus-moins .sol-3,
-#s8-9-plus-moins-chrono .sol-3 {
+#sfois-9-1 .sol-3,
+#sfois-9-2 .sol-3,
+#sfois-9 .sol-3,
+#sfois-9-1-chrono .sol-3 {
     width: 100%;
     height: 350px;
     position: absolute;
@@ -152,25 +152,25 @@
     background: url(../img/decors/bg_caverne.png) repeat-x bottom left;
 }
 
-#s8-9-plus .decor,
-#s8-9-moins .decor,
-#s8-9-plus-moins .decor,
-#s8-9-plus-moins-chrono .decor {
+#sfois-9-1 .decor,
+#sfois-9-2 .decor,
+#sfois-9 .decor,
+#sfois-9-1-chrono .decor {
     background: url(../img/decors/decor-grotte.png);    
 }
 
 
-#s8-9-plus .sol-1,
-#s8-9-moins .sol-1,
-#s8-9-plus-moins .sol-1,
-#s8-9-plus-moins-chrono .sol-1 {
+#sfois-9-1 .sol-1,
+#sfois-9-2 .sol-1,
+#sfois-9 .sol-1,
+#sfois-9-1-chrono .sol-1 {
     background: url("../img/decors/sandCenter.png");
 }
 
-#s8-9-plus .sol-1 > div,
-#s8-9-moins .sol-1 > div,
-#s8-9-plus-moins .sol-1 > div,
-#s8-9-plus-moins-chrono .sol-1 > div {
+#sfois-9-1 .sol-1 > div,
+#sfois-9-2 .sol-1 > div,
+#sfois-9 .sol-1 > div,
+#sfois-9-chrono .sol-1 > div {
     background: url("../img/decors/sandMid.png") repeat-x;
 }
 
