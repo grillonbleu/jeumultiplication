@@ -225,6 +225,10 @@ html, body {
     margin: 4px;
 }
 
+.gui .clavier-numerique button.reponse[value="X"] {
+    width: 136px;
+}
+
 .gui .clavier-numerique button.reponse[value="E"] {
     width: 88px;
 }

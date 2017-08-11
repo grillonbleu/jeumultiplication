@@ -109,7 +109,10 @@ arithmepique.scene.etats.Question = function(scene) {
     jQuery(".Question .clavier-numerique button.reponse").on("click.arithmepique", function() {
         if(this.value === "E") {
             noeud_saisie.text("");
-            that.surBoutonReponse(cumul); 
+            that.surBoutonReponse(cumul);
+        } else if(this.value === "X") {
+            cumul = "";
+            noeud_saisie.text("");
         } else {
             cumul += this.value;
             noeud_saisie.text(cumul);
