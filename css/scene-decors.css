@@ -14,14 +14,14 @@
 }
 
 /* Monde 1 / plaines */
-#s1-2-3-plus .wrap,
+#sfois-10 .wrap,
 #s1-2-3-moins .wrap,
 #s1-2-3-plus-moins .wrap {
     background-image: url("../img/decors/bg_grasslands.png");
 }
 
 
-#s1-2-3-plus .decor,
+#sfois-10 .decor,
 #s1-2-3-moins .decor,
 #s1-2-3-plus-moins .decor {
     background: url(../img/decors/decor_plaine.png);    

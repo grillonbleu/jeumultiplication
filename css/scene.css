@@ -157,6 +157,8 @@ html, body {
    animation-fill-mode: none;
 }
 
+
+
 .info .etoiles span {
     display: inline-block;
     background: transparent url("../img/scene_etoile_perdue.png") repeat scroll 0% 0%;
@@ -221,6 +223,21 @@ html, body {
     height: 40px;
     font-size: 16pt;
     margin: 4px;
+}
+
+.gui .clavier-numerique button.reponse[value="E"] {
+    width: 88px;
+}
+
+.gui .clavier-numerique .saisie {
+    border: 2px dashed #94aeb0;
+    margin: 4px;
+    width: 132px;
+    font-size: 14pt;
+    font-family: sans-serif;
+    color: #94aeb0;
+    height: 1.2em;
+    padding: .2em;
 }
 
 .gui .chrono {

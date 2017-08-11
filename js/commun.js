@@ -19,7 +19,7 @@ window.arithmepique.animEnd = "animationend webkitAnimationEnd oAnimationEnd MSA
 
 
 (function() {
-    var regexp = /^[0-9]+\s[\+-]\s[0-9]+$/;
+    var regexp = /^[0-9]+\s[\+\-\*]\s[0-9]+$/;
     
     /**
      * Evaluateur simple d'addition et de soustractions exprimées dans une chaine.
@@ -70,7 +70,10 @@ arithmepique.shuffle = function(array) {
     return array;
 };
 
-
+arithmepique.pickRandom = function(array){
+    return array[Math.floor(Math.random() * array.length)];
+};
+ 
 arithmepique.Scenes = function() {};
 arithmepique.Scenes.prototype = {
     obtientSceneParId: function(scene_id) {

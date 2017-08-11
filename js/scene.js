@@ -31,12 +31,22 @@ arithmepique.scene.etats.Depart = function(scene) {
     for(var operateur in this.scene.script.monstres) {
         if(!(operateur in nb_operations)) continue;
         var nom_monstre = this.scene.script.monstres[operateur];
+        
+        if(!(nom_monstre instanceof Array)) {
+            nom_monstre = [nom_monstre];
+        }
+        
+        var html_sprites = "";
+        for(var ii = 0; ii < nom_monstre.length; ++ii) {
+            html_sprites += sprintf('<span class="%s"><span class="sprite"></span></span>', nom_monstre[ii]);
+        }
 
         var rangee = modele_rangee.clone();
 
         rangee
-            .find(".cell-monstre").append(sprintf('<span class="%s"><span class="sprite"></span></span>', nom_monstre))
-            .find(".op").text(operateur).end().end()
+            .find(".cell-monstre").append(html_sprites)
+            //.find(".op").text(operateur).end()
+            .end()
             .find(".cell-op").text(operateur).end()
             .find(".cell-nb").text(nb_operations[operateur]).end()
             .appendTo(tableau_resume);
@@ -89,24 +99,33 @@ arithmepique.scene.etats.Question = function(scene) {
     jQuery(".Question").removeClass("inactif");
     
     this.equation = this.scene.script.operations[this.scene.monstres[0]];
-    jQuery(".equation .question").text(this.equation);
+    jQuery(".equation .question").text(this.equation.replace("*", "×"));
     
     this.scene.affichePersonnages(jQuery(".Question .combat"));
     
     var that = this;
+    var cumul = "";
+    var noeud_saisie = jQuery(".Question .clavier-numerique .saisie");
     jQuery(".Question .clavier-numerique button.reponse").on("click.arithmepique", function() {
-        that.surBoutonReponse(this.value); 
+        if(this.value === "E") {
+            noeud_saisie.text("");
+            that.surBoutonReponse(cumul); 
+        } else {
+            cumul += this.value;
+            noeud_saisie.text(cumul);
+        }
+        
     });
     
     jQuery("body").on("keypress.arithmepique", function(event) {
         if(48 <= event.which && event.which <= 57) {
-            that.surBoutonReponse(event.key);
-            return false;
+            cumul += event.key;
+            noeud_saisie.text(cumul);
         }
         
         if("Enter" === event.key) {
-            that.surBoutonReponse("10");
-            return false;
+            noeud_saisie.text("");
+            that.surBoutonReponse(cumul); 
         }
         
         return true;
@@ -185,7 +204,7 @@ arithmepique.scene.etats.Bon = function(scene) {
     this.scene.audio.jouerSon("attaque");
 
     this.equation = this.scene.script.operations[this.scene.monstres[0]];
-    jQuery(".equation .question").text(this.equation);
+    jQuery(".equation .question").text(this.equation.replace("*", "×"));
     jQuery(".equation .reponse").text(arithmepique.calc(this.equation));
 
     var combat = jQuery(".Bon .combat");
@@ -283,7 +302,7 @@ arithmepique.scene.etats.Mauvais = function(scene, reponse_donnee) {
     this.scene.audio.jouerSon("battu");
 
     this.equation = this.scene.script.operations[this.scene.monstres[0]];
-    jQuery(".equation .question").text(this.equation);
+    jQuery(".equation .question").text(this.equation.replace("*", "×"));
     jQuery(".equation .reponse-correcte").text(arithmepique.calc(this.equation));
     jQuery(".equation .reponse-donnee").text(reponse_donnee);
 
@@ -391,7 +410,7 @@ arithmepique.scene.etats.ChronoEpuise = function(scene) {
     this.scene.audio.jouerSon("battu");
 
     this.equation = this.scene.script.operations[this.scene.monstres[0]];
-    jQuery(".equation .question").text(this.equation);
+    jQuery(".equation .question").text(this.equation.replace("*", "×"));
     jQuery(".equation .reponse").text(arithmepique.calc(this.equation));
 
     this.scene.affichePersonnages(jQuery(".ChronoEpuise .combat"));
@@ -555,6 +574,12 @@ arithmepique.scene.Scene.prototype = {
                 classe_monstre = this.script.monstres["+"];
             } else if (-1 !== equation.indexOf("-")) {
                 classe_monstre = this.script.monstres["-"];
+            } else if (-1 !== equation.indexOf("*")) {
+                
+                var nb_sortes = this.script.monstres["*"].length;
+                var sorte = this.monstres[ii] % nb_sortes;
+                
+                classe_monstre = this.script.monstres["*"][sorte];
             }
             
             jQuery(html).addClass(classe_monstre).appendTo(noeud.find(".monstres"));

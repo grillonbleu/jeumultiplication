@@ -29,25 +29,26 @@ arithmepique.scripts.portes = {
 
 arithmepique.scripts.scenes = [
     {
-        titre: "Monde 1, les plaines : plus",
+        titre: "Monde 1, les plaines : 10",
         
-        id: "1-2-3-plus",
+        id: "fois-10",
         posCarte: "9,2", //top, left
 
         operations: [
-            "0 + 1",
-            "1 + 0",
-            "0 + 2",
-            "1 + 1",
-            "2 + 0",
-            "0 + 3",
-            "1 + 2",
-            "2 + 1",
-            "3 + 0"
+            "10 * 1",
+            "10 * 2",
+            "10 * 3",
+            "10 * 4",
+            "10 * 5",
+            "10 * 6",
+            "10 * 7",
+            "10 * 8",
+            "10 * 9"
         ],
         monstres: {
             "+": "coccinelle",
-            "-": "abeille"
+            "-": "abeille",
+            "*": ["coccinelle", "abeille"]
         },
         chrono: false
     },

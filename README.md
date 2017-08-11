@@ -2,14 +2,14 @@
 
 [*Jouer*](http://lampyridae.github.io/jeuplusmoins/)
 
-Arithmépique est un jeu d'exercice destiné aux enfants de première année du primaire.
-On y pratique les additions et soustractions simples, sans dizaines ni retenues.
+Arithmépique est un jeu d'exercice destiné aux enfants.
+On y pratique les multiplications.
 
 J'ai développé ce jeu pour offrir à mon fils une façon ludique de se pratiquer.
 En offrant ce jeu à tous j'espère aider d'autres petits à faire avec entrain
 leur premiers pas en mathématiques.
 
-##Générique
+## Générique
 
 <dl>
      <dt>Idée, conception, programmation et mise en page</dt>
