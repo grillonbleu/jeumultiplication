@@ -1,6 +1,6 @@
 # Arithmépique
 
-[*Jouer*](http://lampyridae.github.io/jeuplusmoins/)
+[*Jouer*](http://grillonbleu.github.io/jeuplusmoins/)
 
 Arithmépique est un jeu d'exercice destiné aux enfants.
 On y pratique les multiplications.
