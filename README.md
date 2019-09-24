@@ -30,7 +30,7 @@ leur premiers pas en mathématiques.
 
 ## Licence
 
- Ce jeu est publié en <a href="https://github.com/lampyridae/jeuplusmoins">source libre</a> sous la licence MIT :
+ Ce jeu est publié en <a href="https://github.com/grillonbleu/jeumultiplication">source libre</a> sous la licence MIT :
 
  The MIT License (MIT)
 
