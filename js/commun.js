@@ -11,7 +11,16 @@
         }
         return b;
     })(window.location.search.substr(1).split('&'));
+
+
 })(jQuery);
+
+jQuery(function() {
+    jQuery("#toggle-parent").on("click", function() {
+        var j = new arithmepique.Joueurs();
+        j.toggleParent();
+    });
+});
 
 window.arithmepique = {};
 window.arithmepique.animEnd = "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd";
@@ -306,8 +315,15 @@ arithmepique.Joueurs.prototype = {
     },
     
     //Taper dans la console : (new arithmepique.Joueurs()).allumeParent()
-    allumeParent: function() {
-        sessionStorage.setItem("ArithmetiqueParent", "oui");
+    toggleParent: function() {
+        var est_parent = sessionStorage.getItem("ArithmetiqueParent");
+
+        if("oui" == est_parent) {
+            sessionStorage.setItem("ArithmetiqueParent", "non");
+        } else {
+            sessionStorage.setItem("ArithmetiqueParent", "oui");
+        }
+
         location.reload();
     }
     
