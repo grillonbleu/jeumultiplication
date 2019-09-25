@@ -184,6 +184,7 @@ arithmepique.Audio.prototype = {
         for(var nom_son in this.lecteurs) {
             if(this.lecteurs.hasOwnProperty(nom_son)) {
                 this.lecteurs[nom_son].volume = volume;
+                this.lecteurs[nom_son].play();
             }
         }
     },
